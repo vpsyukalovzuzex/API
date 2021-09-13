@@ -48,7 +48,7 @@ public class Api {
     }
     
     @discardableResult
-    public static func promiseGetLanguages() -> Promise<LanguagesResponse> {
+    public static func getLanguages() -> Promise<LanguagesResponse> {
         return request(.getLanguages, nil, LanguagesResponse.self, nil).promise
     }
     
