@@ -18,16 +18,16 @@ public struct TranslateResponse: Codable {
         case targetTransliteration = "targetTransliteration"
     }
     
-    var error: String?
+    public var error: String?
     
-    var result: String
-    var source: String
-    var from: String
-    var translator: String
-    var translatorLink: String
+    public var result: String
+    public var source: String
+    public var from: String
+    public var translator: String
+    public var translatorLink: String
     
-    var sourceTransliteration: String?
-    var targetTransliteration: String?
+    public var sourceTransliteration: String?
+    public var targetTransliteration: String?
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Key.self)
