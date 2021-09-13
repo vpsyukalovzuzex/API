@@ -6,6 +6,8 @@ import Foundation
 
 public struct TranslateResponse: Codable {
     
+    // MARK: - Private enum
+    
     private enum Key: String, CodingKey {
         
         case error = "err"
@@ -18,6 +20,8 @@ public struct TranslateResponse: Codable {
         case targetTransliteration = "targetTransliteration"
     }
     
+    // MARK: - Public var
+    
     public var error: String?
     
     public var result: String
@@ -28,6 +32,8 @@ public struct TranslateResponse: Codable {
     
     public var sourceTransliteration: String?
     public var targetTransliteration: String?
+    
+    // MARK: - Public init
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Key.self)

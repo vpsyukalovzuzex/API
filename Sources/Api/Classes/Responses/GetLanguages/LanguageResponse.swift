@@ -6,6 +6,8 @@ import Foundation
 
 public struct LanguageResponse: Codable {
     
+    // MARK: - Private enum
+    
     private enum Key: String, CodingKey {
         
         case fullCode = "full_code"
@@ -18,6 +20,8 @@ public struct LanguageResponse: Codable {
         case modes = "modes"
     }
     
+    // MARK: - Public var
+    
     public var fullCode: String
     public var codeAlpha1: String
     public var englishName: String
@@ -28,6 +32,8 @@ public struct LanguageResponse: Codable {
     public var rtl: Bool
     
     public var modes: [ModeResponse]
+    
+    // MARK: - Public init
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Key.self)
